@@ -9,18 +9,74 @@ html {
   font-family: "Inter", sans-serif;
 }
 
-header {
-  border: 1px solid red;
-  height: 152px;
-}
-
 section {
-  border: 1px solid purple;
   height: 340px;
 }
 
+header {
+  height: 152px;
+  background-color: #ff3b3c;
+  max-width: 100%;
+}
+
+.search {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.search .form {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+}
+
+.search .form input {
+  height: 62px;
+  border-radius: 14px;
+  border: none;
+  width: 505px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.search .social ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.search .social ul li {
+  padding: 0 10px;
+}
+
+.nav {
+  padding: 10px 0
+}
+
+.nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li a {
+  color: white;
+  font-weight: 700;
+  text-align: left;
+  text-decoration: none;
+}
+
+.nav ul li a:hover {
+  text-decoration: underline;
+}
+
 main {
-  border: 1px solid blue;
   height: auto;
 }
 
@@ -32,13 +88,13 @@ footer {
 
 /* Hero section */
 section#hero {
-  border: 1px solid purple;
   height: 340px;
   background: url("../assets/hero_bg.png");
   background-size: cover;
   background-position: top center;
+  display: flex;
+  align-items: center;
 }
-
 
 section#hero .container {
   display: flex;
@@ -65,9 +121,9 @@ section#hero .container {
 .container {
   width: 100%;
   margin: 0 auto;
-  border: 1px solid springgreen;
   height: inherit;
   min-height: inherit;
+  margin-top: 1em;
 }
 
 main .container {
@@ -122,9 +178,10 @@ main .container {
 
 @media screen and (max-width: 768px) {
 
-  /* .product-card {
-    flex-basis: 45%;
-  } */
+  .search .form input {
+    height: 55px;
+    width: 250px;
+  }
   .product-container {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -140,6 +197,11 @@ main .container {
 }
 
 @media screen and (max-width: 480px) {
+  .search .form input {
+    height: 55px;
+    width: 100px;
+  }
+
   .product-container {
     grid-template-columns: repeat(1, 1fr);
   }
